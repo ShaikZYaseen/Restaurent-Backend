@@ -18,7 +18,7 @@ const createResturantController = async (req, res) => {
       coords,
     } = req.body;
     // validation
-    if (!title || !coords) {
+    if (!title ) {
       return res.status(500).send({
         success: false,
         message: "please provide title and address",

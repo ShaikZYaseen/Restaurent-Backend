@@ -1,6 +1,24 @@
 const userModel = require("../models/userModel");
 const bcrypt = require("bcryptjs");
 
+
+
+
+
+
+//CREATE USER
+const createUser = async(req,res)=>{
+  const user = await userModel.create(...req.body);
+  res.status(200).send({
+    user,
+    success: true,
+    message: "USer Updated SUccessfully",
+  });
+}
+
+
+
+
 // GET USER INFGO
 const getUserController = async (req, res) => {
   try {

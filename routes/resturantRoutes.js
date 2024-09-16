@@ -12,7 +12,7 @@ const router = express.Router();
 
 //routes
 // CRAETE RESTURANT || POST
-router.post("/create", authMiddleware, createResturantController);
+router.post("/create", createResturantController);
 
 // GET ALL RESTURANTS || GET
 router.get("/getAll", getAllResturantController);
@@ -21,6 +21,6 @@ router.get("/getAll", getAllResturantController);
 router.get("/get/:id", getResturantByIdController);
 
 // DELETE RESTURANT || DELETE
-router.delete("/delete/:id", authMiddleware, deleteResturantController);
+router.delete("/delete/:id", deleteResturantController);
 
 module.exports = router;
